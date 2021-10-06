@@ -8,6 +8,8 @@ let users = [{
 }, ]
 let server = http.createServer(function(req, res) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader("Access-Control-Allow-Headers", "content-type");
+	res.setHeader("Access-Control-Allow-Methods", "DELETE,PUT,POST,GET,OPTIONS");
 	if (req.url === '/api/users') {
 		res.end(JSON.stringify(users));
 	} else {
