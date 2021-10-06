@@ -15,6 +15,7 @@ let server = http.createServer(function(req, res) {
 	}
 })
 
+console.log('gogo');
 
 server.listen(3000, () => {
 	console.log('back_end is staring...')
